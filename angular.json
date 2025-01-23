@@ -32,7 +32,8 @@
               }
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/@videogular/ngx-videogular/fonts/videogular.css"
             ],
             "scripts": [],
             "server": "src/main.server.ts",
@@ -75,7 +76,10 @@
               "buildTarget": "videoRender:build:development"
             }
           },
-          "defaultConfiguration": "development"
+          "defaultConfiguration": "development",
+          "options": {
+      "proxyConfig": "proxy.conf.json"
+    }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n"
@@ -103,5 +107,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "49d985f8-a78b-4a54-a6dd-17b0597266ce"
   }
 }

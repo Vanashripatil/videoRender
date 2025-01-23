@@ -1,0 +1,72 @@
+<div _ngcontent-ng-c931267033="" class="card">
+  <div _ngcontent-ng-c931267033="" class="image-container">
+    <video _ngcontent-ng-c931267033="" controls>
+      <source src="https://voterlist.blob.core.windows.net/media-container/Sequence%2002_29.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div _ngcontent-ng-c931267033="" class="card-content">
+    <div _ngcontent-ng-c931267033=""
+      class="media-counts d-flex justify-content-start small gap-3 align-items-center mb-1">
+      <span _ngcontent-ng-c931267033="" class="d-flex justify-content-center align-items-center gap-2">
+        <i _ngcontent-ng-c931267033="" class="fa-solid fa-download"></i> 0
+      </span>
+      <span _ngcontent-ng-c931267033="" class="d-flex justify-content-center align-items-center gap-2">
+        <i _ngcontent-ng-c931267033="" class="fa-solid fa-share"></i> 0
+      </span>
+      <span _ngcontent-ng-c931267033="" class="d-flex justify-content-center align-items-center gap-2">
+        <i _ngcontent-ng-c931267033="" class="fa-solid fa-eye"></i> 0
+      </span>
+    </div>
+    <!--container-->
+    <div _ngcontent-ng-c931267033="" class="d-flex justify-content-between">
+      <p _ngcontent-ng-c931267033="" class="banner-content w-80" ng-reflect-ng-class="[object Object]">asfasfas</p>
+      <div _ngcontent-ng-c931267033="" class="actions w-20 d-flex justify-content-end ng-star-inserted">
+      </div>
+      <!--container-->
+      <!--  </div> -->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<ng-container *ngIf="isBrowser">
+  <vg-player (onPlayerReady)="onPlayerReady($event)" style="width: 800px; height: 450px;">
+
+    <vg-overlay-play></vg-overlay-play>
+    <vg-buffering vgFor="singleVideo"></vg-buffering>
+    <vg-scrub-bar>
+      <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+      <vg-scrub-bar-buffering-time>
+      </vg-scrub-bar-buffering-time>
+    </vg-scrub-bar>
+
+    <vg-controls>
+      <vg-play-pause>
+
+      </vg-play-pause>
+      <vg-playback-button></vg-playback-button>
+      <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+      <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+      <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+      <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+      <vg-track-selector></vg-track-selector>
+      <vg-mute></vg-mute>
+      <vg-volume></vg-volume>
+      <vg-fullscreen></vg-fullscreen>
+    </vg-controls>
+
+    <video [vgMedia]="$any(media)" #media id="singleVideo" preload="auto"
+      src="/api/media-container/10%20Second%20Video%20Loop%20(1).mp4" crossorigin="anonymous">
+
+    </video>
+  </vg-player>
+</ng-container>

@@ -1,0 +1,11 @@
+{
+    "/api": {
+      "target": "https://voterlist.blob.core.windows.net",
+      "secure": true,
+      "changeOrigin": true,
+      "pathRewrite": {
+        "^/api": ""
+      }
+    }
+  }
+  
